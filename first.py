@@ -76,8 +76,8 @@ class tri:
             z3 = z3 + dz13
 
         # двигаемся по X от p2 до p3 и рисуем вертикальные линии от одной линии треугольника до другой
-        y2 = y2 - dy12 + dy23
-        z2 = z2 - dz12 + dy23
+        y2 = p2.y + dy23
+        z2 = p2.z + dz23
 
         for x in range(p2.x + 1, p3.x + 1):
 
@@ -135,7 +135,7 @@ img = Image.new('RGB', (scr_x, scr_y), 'black')
 canvas_pixels = img.load()
 
 #f = open('C:/3d mod/pjanic.obj')
-f = open('C:/3d mod/skull/12140_Skull_v3_L2.obj')
+f = open('C:/Users/Alexander/PycharmProjects/3dxu/12140_Skull_v3_L2.obj')
 lines = f.read()
 
 # считаем точки из файла "как есть"
