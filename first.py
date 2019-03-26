@@ -78,6 +78,9 @@ class tri:
         # двигаемся по X от p2 до p3 и рисуем вертикальные линии от одной линии треугольника до другой
         y2 = p2.y + dy23
         z2 = p2.z + dz23
+        #y2 = y2 - dy12 + dy23
+        y2 = y2 * dy12 + dy23
+        z2 = z2 - dz12 + dy23
 
         for x in range(p2.x + 1, p3.x + 1):
 
@@ -100,6 +103,8 @@ class tri:
             z3 = z3 + dz13
 
 def redef(p1, p2, p3, p4):
+
+    # новый комментарий
 
     if p1.x == p2.x and p1.x == p3.x and p1.x == p4.x or p1.y == p2.y and p1.y == p3.y and p1.y == p4.y:
         return None
